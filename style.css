@@ -1,11 +1,9 @@
-/* Базовый контейнер табов */
 .tabs {
 	min-width: 320px;
 	max-width: 800px;
 	padding: 0px;
 	margin: 0 auto;
 }
-/* Стили секций с содержанием */
 .tabs>section {
 	display: none;
 	padding: 15px;
@@ -24,8 +22,6 @@
 	-webkit-animation-name: fadeIn;
 	animation-name: fadeIn;
 }
-/* Описываем анимацию свойства opacity */
- 
 @-webkit-keyframes fadeIn {
 	from {
 		opacity: 0;
@@ -42,12 +38,10 @@
 		opacity: 1;
 	}
 }
-/* Прячем чекбоксы */
 .tabs>input {
 	display: none;
 	position: absolute;
 }
-/* Стили переключателей вкладок (табов) */
 .tabs>label {
 	display: inline-block;
 	margin: 0 0 -1px;
@@ -60,8 +54,6 @@
 	background: #f1f1f1;
 	border-radius: 3px 3px 0 0;
 }
-
-/* Шрифт-иконки от Font Awesome в формате Unicode */
 .tabs>label:before {
 	margin-right: 5px;
 }
@@ -78,28 +70,19 @@
 .tabs>label[for*="4"]:before {
 	content: "4.";
 }
-/* Изменения стиля переключателей вкладок при наведении */
- 
 .tabs>label:hover {
 	color: #888;
 	cursor: pointer;
 }
-
-/* Стили для активной вкладки */
 .tabs>input:checked+label {
 	color: #555;
 	border-top: 1px solid #009933;
 	border-bottom: 1px solid #fff;
 	background: #fff;
 }
-/* Активация секций с помощью псевдокласса :checked */
 #tab1:checked~#content-tab1, #tab2:checked~#content-tab2, #tab3:checked~#content-tab3, #tab4:checked~#content-tab4 {
 	display: block;
 }
-/* Убираем текст с переключателей 
-* и оставляем иконки на малых экранах
-*/
- 
 @media screen and (max-width: 680px) {
 	.tabs>label {
 		font-size: 0;
@@ -109,22 +92,16 @@
 		font-size: 18px;
 	}
 }
-
-/* Изменяем внутренние отступы 
-*  переключателей для малых экранов
-*/
 @media screen and (max-width: 400px) {
 	.tabs>label {
 		padding: 15px;
 	}
 }
-
 table {
 	border-collapse: collapse;
 	width: 100%;
 	margin:;
 }
-
 td {
 	border: 1px solid black;
 	padding: 10px;
